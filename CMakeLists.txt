@@ -1,7 +1,7 @@
 
-if(NOT WINCE)
+if(WIN32 AND NOT WINCE)
  add_subdirectory(create_hash_table)
-endif(NOT WINCE)
+endif()
 
 
 if (MINGW)
@@ -10,5 +10,7 @@ endif()
 if(BUILD_PNG2ICO)
     add_subdirectory(png2ico)
 endif()
-add_subdirectory(svg2ico)
-add_subdirectory(realpath)
+if(WIN32)
+    add_subdirectory(svg2ico)
+    add_subdirectory(realpath)
+endif()

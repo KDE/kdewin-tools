@@ -70,7 +70,7 @@ bool svg2png(const QString &inFile, const QString &outFile, int width, int heigh
         QFileInfo iif(inFile);
         QFileInfo of(outFile);
         tmpFile = of.absolutePath()+'/'+iif.baseName()+".svg";
-        bool ret = unzipGZipFile(svgFile.toAscii().data(),tmpFile.toAscii().data());
+        bool ret = unzipGZipFile(svgFile.toLocal8Bit().data(),tmpFile.toLocal8Bit().data());
         if (verbose || !ret)
             qDebug() << "uncompressing" << svgFile << "to" << tmpFile << ":" << (ret ? "okay" : "error");
 

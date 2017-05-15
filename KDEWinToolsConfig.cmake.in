@@ -1,0 +1,4 @@
+get_filename_component(KDEWIN_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${KDEWIN_CMAKE_DIR}/KDEWinToolsTargets.cmake")

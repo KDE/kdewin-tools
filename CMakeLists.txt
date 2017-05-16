@@ -53,8 +53,8 @@ endif()
 
 configure_file(KDEWinToolsConfig.cmake.in ${CMAKE_BINARY_DIR}/KDEWinToolsConfig.cmake @ONLY)
 configure_file(KDEWinToolsConfigVersion.cmake.in ${CMAKE_BINARY_DIR}/KDEWinToolsConfigVersion.cmake @ONLY)
-install(FILES ${CMAKE_BINARY_DIR}/KDEWinToolsConfig.cmake ${CMAKE_BINARY_DIR}/KDEWinToolsConfigVersion.cmake DESTINATION lib/cmake/KDEWinTools)
-install(EXPORT targets FILE KDEWinToolsTargets.cmake DESTINATION lib/cmake/KDEWinTools)
+install(FILES ${CMAKE_BINARY_DIR}/KDEWinToolsConfig.cmake ${CMAKE_BINARY_DIR}/KDEWinToolsConfigVersion.cmake DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/KDEWinTools)
+install(EXPORT targets FILE KDEWinToolsTargets.cmake DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/KDEWinTools)
 install(FILES readme.txt DESTINATION share/doc/kdewin-tools-${VERSION_STR})
 
 if(BUILD_CREATE_HASH_TABLE)

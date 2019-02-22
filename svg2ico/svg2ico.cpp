@@ -20,6 +20,7 @@
    svg to ico format converter 
 */
 
+#include <QApplication>
 #include <QtCore/QtDebug>
 
 #include <QtCore/QString>
@@ -140,6 +141,8 @@ int main(int argc, char **argv)
         debug = true;
         i++;
     }
+
+    QApplication app(argc, argv);
 
     QString svgFile = QString::fromLocal8Bit(argv[i++]);
     QString icoFile = QString::fromLocal8Bit(argv[i++]);

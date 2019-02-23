@@ -33,6 +33,7 @@ OPTION(BUILD_CREATE_HASH_TABLE "build create_hash_table tool" ${WIN32_ON})
 OPTION(BUILD_MT "build mt tool" ${MINGW_ON})
 OPTION(BUILD_PNG2ICO "build png2ico tool" ON)
 OPTION(BUILD_SVG2ICO "build svg2ico tool" ${WIN32_ON})
+OPTION(BUILD_SVG2MULTIPNG "build svg2multipng tool" ON)
 
 set (EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
@@ -68,4 +69,8 @@ if(BUILD_PNG2ICO)
 endif()
 if(BUILD_SVG2ICO)
     add_subdirectory(svg2ico)
+endif()
+
+if(BUILD_SVG2MULTIPNG)
+    add_subdirectory(svg2multipng)
 endif()
